@@ -1,0 +1,250 @@
+@charset "UTF-8";
+*, *:aftre, *:before {
+  box-sizing: border-box;
+}
+
+body {
+  background: #000;
+  margin: 0;
+}
+body:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.grid {
+  background: #000;
+  overflow: hidden;
+}
+@media (min-width: 800px) {
+  .grid {
+    width: 50%;
+    float: left;
+  }
+}
+
+/*/ === ^ ☝️ Above code not required! ===/*/
+#model-5 .gooey-loading, #model-4 .gooey-loading, #model-3 .gooey-loading, #model-3 .gooey-loading:after, #model-3 .gooey-loading:before, #model-2 .gooey-loading:after, #model-2 .gooey-loading:before, #model-2 .gooey-loading, #model-1 .gooey-loading, #model-1 .gooey-loading:after {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.wrapper {
+  height: 50vh;
+  min-height: 300px;
+  background: inherit;
+  position: relative;
+  filter: blur(10px) contrast(20);
+}
+
+#model-1 .gooey-loading, #model-1 #model-3 .gooey-loading:before, #model-3 #model-1 .gooey-loading:before, #model-1 .gooey-loading:after {
+  color: red;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: currentcolor;
+  -webkit-animation: 1s bigBallHmove infinite alternate;
+          animation: 1s bigBallHmove infinite alternate;
+}
+#model-1 .gooey-loading:after {
+  content: "";
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  -webkit-animation: 1s smallBallHmove infinite alternate;
+          animation: 1s smallBallHmove infinite alternate;
+}
+@-webkit-keyframes bigBallHmove {
+  0% {
+    transform: translate(0%, -50%);
+  }
+  100% {
+    transform: translate(-100%, -50%);
+  }
+}
+@keyframes bigBallHmove {
+  0% {
+    transform: translate(0%, -50%);
+  }
+  100% {
+    transform: translate(-100%, -50%);
+  }
+}
+@-webkit-keyframes smallBallHmove {
+  0% {
+    transform: translate(-200%, -50%);
+  }
+  100% {
+    transform: translate(100%, -50%);
+  }
+}
+@keyframes smallBallHmove {
+  0% {
+    transform: translate(-200%, -50%);
+  }
+  100% {
+    transform: translate(100%, -50%);
+  }
+}
+
+#model-2 .gooey-loading, #model-2 #model-3 .gooey-loading:after, #model-3 #model-2 .gooey-loading:after, #model-2 #model-3 .gooey-loading:before, #model-3 #model-2 .gooey-loading:before, #model-2 #model-1 .gooey-loading:after, #model-1 #model-2 .gooey-loading:after {
+  color: blue;
+  position: relative;
+}
+#model-2 .gooey-loading:after, #model-2 .gooey-loading:before {
+  content: "";
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: currentcolor;
+  -webkit-animation: 1s topVmove infinite alternate linear;
+          animation: 1s topVmove infinite alternate linear;
+}
+#model-2 .gooey-loading:before {
+  -webkit-animation: 1s bottomVmove infinite alternate linear;
+          animation: 1s bottomVmove infinite alternate linear;
+}
+@-webkit-keyframes topVmove {
+  0% {
+    transform: translate(-110%, -110%);
+  }
+  50% {
+    transform: translate(-50%, -50%);
+  }
+  100% {
+    transform: translate(10%, -110%);
+  }
+}
+@keyframes topVmove {
+  0% {
+    transform: translate(-110%, -110%);
+  }
+  50% {
+    transform: translate(-50%, -50%);
+  }
+  100% {
+    transform: translate(10%, -110%);
+  }
+}
+@-webkit-keyframes bottomVmove {
+  100% {
+    transform: translate(-110%, 10%);
+  }
+  50% {
+    transform: translate(-50%, -50%);
+  }
+  0% {
+    transform: translate(10%, 10%);
+  }
+}
+@keyframes bottomVmove {
+  100% {
+    transform: translate(-110%, 10%);
+  }
+  50% {
+    transform: translate(-50%, -50%);
+  }
+  0% {
+    transform: translate(10%, 10%);
+  }
+}
+
+#model-3 .gooey-loading, #model-3 .gooey-loading:after, #model-3 .gooey-loading:before {
+  color: yellow;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: currentcolor;
+}
+#model-3 .gooey-loading:after, #model-3 .gooey-loading:before {
+  content: "";
+  -webkit-animation: 1s BlMerge infinite alternate ease-in;
+          animation: 1s BlMerge infinite alternate ease-in;
+}
+#model-3 .gooey-loading:before {
+  -webkit-animation-name: BrMerge;
+          animation-name: BrMerge;
+}
+@-webkit-keyframes BlMerge {
+  100% {
+    transform: translate(-200%, -50%);
+  }
+}
+@keyframes BlMerge {
+  100% {
+    transform: translate(-200%, -50%);
+  }
+}
+@-webkit-keyframes BrMerge {
+  100% {
+    transform: translate(100%, -50%);
+  }
+}
+@keyframes BrMerge {
+  100% {
+    transform: translate(100%, -50%);
+  }
+}
+
+#model-4 .gooey-loading, #model-4 #model-1 .gooey-loading:after, #model-1 #model-4 .gooey-loading:after, #model-4 #model-3 .gooey-loading:after, #model-3 #model-4 .gooey-loading:after, #model-4 #model-3 .gooey-loading:before, #model-3 #model-4 .gooey-loading:before {
+  color: #00b527;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: currentcolor;
+  box-shadow: 80px 0, -80px 0;
+  position: relative;
+}
+#model-4 .gooey-loading:after {
+  content: "";
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: currentcolor;
+  position: absolute;
+  left: -75px;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-animation: 1s shadowMerge infinite alternate linear;
+          animation: 1s shadowMerge infinite alternate linear;
+}
+@-webkit-keyframes shadowMerge {
+  100% {
+    left: 75px;
+  }
+}
+@keyframes shadowMerge {
+  100% {
+    left: 75px;
+  }
+}
+
+#model-5 .gooey-loading, #model-5 #model-1 .gooey-loading:after, #model-1 #model-5 .gooey-loading:after, #model-5 #model-3 .gooey-loading:after, #model-3 #model-5 .gooey-loading:after, #model-5 #model-3 .gooey-loading:before, #model-3 #model-5 .gooey-loading:before {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: currentcolor;
+  box-shadow: 80px 0, -80px 0;
+  position: relative;
+}
+#model-5 .gooey-loading:after {
+  content: "";
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: currentcolor;
+  position: absolute;
+  left: -75px;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-animation: 1s shadowMerge infinite alternate linear;
+          animation: 1s shadowMerge infinite alternate linear;
+}
+@keyframes shadowMerge {
+  100% {
+    left: 75px;
+  }
+}
